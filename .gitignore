@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# Production build and installers (Do not push .exe to git repository)
+dist/
+release/
+
+# Logs & temp
+*.log
+*.bak
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment and sensitive config
+.env
+.env.local
+config.json
+
+# Editor & OS files
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini
+.DS_Store
