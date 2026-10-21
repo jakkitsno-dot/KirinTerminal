@@ -39,7 +39,59 @@
 
 ---
 
-## 🚀 Getting Started
+## 🚀 การเริ่มต้นใช้งาน (Getting Started)
+
+### ความต้องการของระบบ (Prerequisites)
+
+- [Node.js](https://nodejs.org/) (แนะนำเวอร์ชัน 18 ขึ้นไป)
+- ระบบปฏิบัติการ **Windows 10 หรือ 11** (เนื่องจากต้องใช้โมดูล C++ native `node-pty` สำหรับเชื่อมต่อเทอร์มินัลของ Windows)
+
+---
+
+### ขั้นตอนการติดตั้ง (Installation)
+
+1. **โคลน Repository มาที่เครื่องคอมพิวเตอร์ของคุณ:**
+   ```bash
+   git clone https://github.com/jakkitsno-dot/KirinTerminal.git
+   cd KirinTerminal
+   ```
+
+2. **ติดตั้ง Dependencies และไลบรารีที่จำเป็น:**
+   ```bash
+   npm install
+   ```
+   > *หมายเหตุ:* ระบบจะทำการคอมไพล์ native modules เช่น `node-pty` และ `serialport` ให้เข้ากับระบบของคุณโดยอัตโนมัติ
+
+---
+
+### การรันโปรแกรมในโหมดพัฒนา (Development)
+
+```bash
+# รัน Vite Dev Server พร้อมเปิดหน้าต่างโปรแกรม Electron อัตโนมัติ
+npm run dev
+```
+
+* **คำสั่งย่อยที่มีให้ใช้งาน:**
+  - `npm run dev:vite`: รันเฉพาะ Frontend UI ผ่านเว็บเบราว์เซอร์
+  - `npm run dev:electron`: รันเฉพาะ Electron
+  - หรือดับเบิลคลิกไฟล์ **`start-app.bat`** / **`start-app-silent.vbs`** เพื่อเปิดแอปอย่างรวดเร็ว
+
+---
+
+### การสร้างตัวติดตั้งสำหรับแจกจ่าย (Building for Production)
+
+```bash
+# คอมไพล์โค้ดและสร้างไฟล์ติดตั้ง Windows Setup (.exe) และเวอร์ชัน Portable
+npm run dist:win
+
+# หรือสร้างเป็นโฟลเดอร์โปรแกรมแบบไม่ต้องติดตั้ง (Portable Directory)
+npm run dist:dir
+```
+* ไฟล์ตัวติดตั้งจะถูกสร้างขึ้นในโฟลเดอร์ **`release/`** (เช่น `KirinTerminal Setup 1.0.0.exe`)
+
+---
+
+## 🚀 English Getting Started
 
 ### Prerequisites
 
